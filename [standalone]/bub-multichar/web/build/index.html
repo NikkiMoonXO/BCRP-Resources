@@ -5,9 +5,86 @@
     <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>multichar</title>
+
+    <!-- Main build -->
     <script type="module" crossorigin src="./assets/index-Cmm9aZdi.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-B2Na7iBg.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-B2Na7iBg.css" />
+
+    <!-- === Candy's Create-Character Modal Theme === -->
+    <style>
+      /* Panel → solid black, white text */
+      .mantine-Modal-content,
+      .mantine-Modal-body,
+      .mantine-Paper-root:has(> .mantine-Modal-body) {
+        background: #000 !important;
+        color: #fff !important;
+      }
+
+      /* Labels and helper text */
+      .mantine-InputLabel-label,
+      .mantine-Text-root {
+        color: #fff !important;
+      }
+
+      /* Inputs/Select/DateInput → black boxes with subtle border */
+      .mantine-Input-root,
+      .mantine-Input-wrapper,
+      .mantine-Input-input,
+      .mantine-Select-input,
+      .mantine-DateInput-input,
+      .mantine-DatePickerInput-input,
+      .mantine-TextInput-input {
+        background: #000 !important;
+        color: #fff !important;
+        border: 1px solid #2b2b2b !important;
+        border-radius: 6px !important;
+      }
+
+      /* Focus outline → #f00081 */
+      .mantine-Input-input:focus,
+      .mantine-Select-input:focus,
+      .mantine-DateInput-input:focus,
+      .mantine-DatePickerInput-input:focus,
+      .mantine-TextInput-input:focus {
+        outline: 2px solid #f00081 !important;
+        box-shadow: 0 0 0 2px #f00081 !important;
+        border-color: #f00081 !important;
+      }
+
+      /* Icons/sections inside inputs (calendar, chevron) */
+      .mantine-Input-leftSection,
+      .mantine-Input-rightSection,
+      .mantine-Select-rightSection {
+        color: #fff !important;
+      }
+
+      /* Create button → hot pink */
+      .mantine-Modal-content .mantine-Button-root[data-variant="filled"],
+      .mantine-Modal-content button[type="submit"] {
+        background: #f00081 !important;
+        border-color: #f00081 !important;
+        color: #fff !important;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .mantine-Modal-content
+        .mantine-Button-root[data-variant="filled"]:hover,
+      .mantine-Modal-content button[type="submit"]:hover {
+        filter: brightness(1.15) drop-shadow(0 0 6px #f00081);
+      }
+
+      /* Close (X) visible on black */
+      .mantine-Modal-content [data-mantine-action="close"] {
+        color: #fff !important;
+      }
+
+      /* Optional: subtle glow around the modal */
+      .mantine-Modal-content {
+        box-shadow: 0 0 24px rgba(240, 0, 129, 0.3);
+      }
+    </style>
   </head>
+
   <body>
     <div id="root"></div>
   </body>
