@@ -7,92 +7,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UI</title>
 
-  <!-- your compiled NUI app -->
   <script type="module" crossorigin src="./assets/index.b8e72b46.js"></script>
 
-  <!-- === Candy’s Corrected Black & Pink Theme === -->
+  <!-- 🔥 Only overrides the red highlight color -->
   <style>
-    /* general text color & font */
-    html, body {
-      color: #fff !important;
-      font-family: "Inter", sans-serif;
-      margin: 0;
-      padding: 0;
-      background: transparent !important;
-    }
-
-    /* main panels, menus, and content areas */
-    [class*="menu"],
-    [class*="container"],
-    [class*="panel"],
-    [class*="content"] {
-      background-color: rgba(0, 0, 0, 0.45) !important; /* translucent black */
-      color: #fff !important;
-      border-radius: 8px;
-    }
-
-    /* accent and active elements */
+    /* swap red highlights to pink (#F00081) */
+    [style*="rgb(255, 0, 0)"],
+    [style*="rgba(255, 0, 0"],
     [class*="active"],
     [class*="selected"],
-    [class*="focused"],
     [class*="highlight"],
     [class*="button"]:hover,
-    [class*="toggle"].on {
+    [class*="button"].active {
       background-color: #F00081 !important;
       border-color: #F00081 !important;
       color: #fff !important;
     }
 
-    /* headers and titles */
-    [class*="header"],
-    [class*="title"],
-    h1, h2, h3 {
+    /* if the red color was applied via text instead of background */
+    [style*="color: rgb(255, 0, 0)"],
+    [style*="color:rgba(255, 0, 0"] {
       color: #F00081 !important;
-      letter-spacing: 0.5px;
-    }
-
-    /* dropdowns and select menus */
-    [class*="select"],
-    [class*="dropdown"],
-    [class*="menu-list"],
-    [class*="option-list"] {
-      background-color: rgba(0, 0, 0, 0.6) !important;
-      color: #fff !important;
-    }
-
-    /* inputs and sliders */
-    input, select, textarea {
-      background-color: rgba(0, 0, 0, 0.4) !important;
-      color: #fff !important;
-      border: 1px solid #F00081 !important;
-      border-radius: 6px;
-    }
-
-    /* keep swatches their natural colors */
-    [class*="swatch"],
-    [class*="color-picker"],
-    [class*="color-sample"] {
-      background: unset !important;
-      filter: none !important;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    /* subtle pink glow when hovering buttons */
-    [class*="button"]:hover,
-    [class*="menu-item"]:hover {
-      box-shadow: 0 0 6px #F00081;
-    }
-
-    /* optional scrollbar styling */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #F00081;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-track {
-      background: rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
