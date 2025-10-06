@@ -2,7 +2,7 @@ Config = {}
 
 Config.useMPH = true
 Config.minimapWalking = false
-Config.minimapAlwaysOn = true -- Keep minimap always visible
+Config.minimapAlwaysOn = false -- Keep minimap always visible
 Config.fixMinimapZoom = true -- Fix minimap zoom jumping/glitching
 Config.minimapZoom = 1000 -- Fixed zoom level (higher = more zoomed out)
 Config.fuel = 'ox_fuel' -- Options: 'LegacyFuel', 'ps-fuel', 'ox_fuel', 'xfuel' (x-fuel resource), 'okokGasStation'
