@@ -289,3 +289,30 @@ AddStateBagChangeHandler('isLoggedIn', ('player:%s'):format(cache.serverId), fun
     if not value then return end
     playerEnterVehLoop()
 end)
+
+exports.ox_target.addGlobalVehicle(options, {
+    name = 'lockVehicle',
+    icon = 'fas fa-lock',
+    label = 'Lock/Unlock',
+    onSelect = function(data)
+        local vehicle = data.entity
+        if vehicle and DoesEntityExist(vehicle) then
+            if exports.qbx_vehiclekeys:HasKeys(vehicle) then
+                toggleLock(vehicle)
+            else
+                lib.notify({
+                    title = 'Vehicle',
+                    description = 'You do not have the key for this vehicle',
+                    type = 'error',
+                    duration = 5000
+                })
+            end
+        end
+    end,
+    canInteract = function(entity, distance, coords, name)
+        local vehicleType = GetVehicleType(entity)
+        local isBike = vehicleType == 'bike' or vehicleType == 'cycle'
+
+        return exports.qbx_vehiclekeys:HasKeys(entity) and distance < 2.0 and not isBike
+    end
+})
