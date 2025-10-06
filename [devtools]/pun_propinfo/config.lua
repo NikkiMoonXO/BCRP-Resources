@@ -4,7 +4,7 @@ config = {
 	-- If set to false, players are required to have the "propinfo_use" ace.
 	-- Players can still force the NUI open using dev-tools, but the permissions are checked server-sided.
 	-- Values: true | false
-	anybody_use_command = true,
+	anybody_use_command = false,
 
 	-- Anybody will be able to update the proplist. Recommended: false.
 	-- If set to false, players are required to have the "propinfo_update" ace.
