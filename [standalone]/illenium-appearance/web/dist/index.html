@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI</title>
 
-    <!-- main build -->
-    <script type="module" crossorigin src="./assets/index.b8e72b46.js"></script>
+    <!-- main build (cache-bust if needed by bumping ?v=) -->
+    <script type="module" crossorigin src="./assets/index.b8e72b46.js?v=pink3"></script>
 
-    <!-- === Candy’s Final Fixed Pink Theme (v2, with swatch + highlight fix) === -->
+    <!-- === Candy’s Pink Theme — Swatch-safe version === -->
     <style>
-      :root {
-        --accent-color: #f00081 !important;
-      }
+      :root { --accent-color: #f00081 !important; }
 
-      /* Accordion headers (Ped / Face / Hair etc.) */
+      /* Accordion headers */
       .mantine-Accordion-control[data-active="true"],
       .mantine-Accordion-itemOpened .mantine-Accordion-control,
       .mantine-Accordion-control:hover {
@@ -23,20 +21,7 @@
         color: #fff !important;
       }
 
-      /* Right-side action buttons (icons) */
-      .mantine-ActionIcon-root,
-      .mantine-Button-root[data-variant="filled"] {
-        background-color: var(--accent-color) !important;
-        border-color: var(--accent-color) !important;
-        color: #fff !important;
-      }
-
-      .mantine-ActionIcon-root:hover,
-      .mantine-Button-root[data-variant="filled"]:hover {
-        filter: brightness(1.15) drop-shadow(0 0 6px var(--accent-color));
-      }
-
-      /* Inputs and select boxes */
+      /* Inputs/selects */
       input,
       select,
       textarea,
@@ -50,7 +35,7 @@
         border-radius: 6px !important;
       }
 
-      /* Focused input border + glow */
+      /* Focus glow */
       input:focus,
       select:focus,
       textarea:focus,
@@ -63,98 +48,67 @@
         border-color: var(--accent-color) !important;
       }
 
-      /* Sliders and highlights */
+      /* Sliders */
       .mantine-Slider-bar,
-      .mantine-Slider-thumb {
+      .mantine-Slider-thumb,
+      .mantine-Slider-track[data-inverted="true"] .mantine-Slider-bar {
         background-color: var(--accent-color) !important;
       }
 
-      /* Switches and toggles */
+      /* Switches */
       .mantine-Switch-track[data-checked="true"],
       .mantine-Switch-thumb[data-checked="true"] {
         background-color: var(--accent-color) !important;
         border-color: var(--accent-color) !important;
       }
 
-      /* Buttons (Save, Cancel) */
-      button,
-      .mantine-Button-root {
+      /* ==== IMPORTANT: style UI controls, NOT generic <button> ==== */
+      /* Buttons, ActionIcons, and UnstyledButtons used as small chevrons — but NOT color swatches */
+      .mantine-Button-root:not(.mantine-ColorSwatch-root),
+      .mantine-ActionIcon-root:not(.mantine-ColorSwatch-root),
+      .mantine-UnstyledButton-root:not(.mantine-ColorSwatch-root) {
         background-color: var(--accent-color) !important;
         border-color: var(--accent-color) !important;
         color: #fff !important;
-        transition: all 0.2s ease-in-out;
+        transition: filter .2s ease-in-out;
       }
-
-      button:hover,
-      .mantine-Button-root:hover {
+      .mantine-Button-root:not(.mantine-ColorSwatch-root):hover,
+      .mantine-ActionIcon-root:not(.mantine-ColorSwatch-root):hover,
+      .mantine-UnstyledButton-root:not(.mantine-ColorSwatch-root):hover {
         filter: brightness(1.15) drop-shadow(0 0 6px var(--accent-color));
       }
 
-      /* === FIX: keep color swatches their true colors === */
-      .mantine-ColorSwatch-root,
-      .mantine-ColorPicker-swatch,
-      button.mantine-ColorSwatch-root {
-        background: unset !important;
-        background-color: unset !important;
-        box-shadow: none !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
-      }
+      /* DO NOT style bare `button` tags at all — that’s what was painting swatches pink */
 
-      /* ensure swatch hover doesn’t go pink */
+      /* Swatches: let Mantine/inline styles set their real colors; just give subtle border */
+      .mantine-ColorSwatch-root,
+      .mantine-ColorPicker-swatch {
+        box-shadow: none !important;
+        border: 1px solid rgba(255,255,255,0.12) !important;
+      }
       .mantine-ColorSwatch-root:hover,
       .mantine-ColorPicker-swatch:hover {
-        filter: brightness(1.15) !important;
+        filter: brightness(1.08) !important;
         border-color: var(--accent-color) !important;
       }
 
-      /* === FIX: solid black background === */
-      .mantine-Paper-root,
-      .mantine-Accordion-item,
-      .mantine-Modal-body {
-        background: #000 !important;
-        border: none !important;
-      }
-
-      /* override any Mantine transparency filters */
-      .mantine-Overlay-root,
-      .mantine-Modal-overlay {
-        background: rgba(0, 0, 0, 1) !important;
-      }
-
-      /* === NEW: stop global button rule from coloring swatches === */
-      button:not(.mantine-ColorSwatch-root),
-      .mantine-Button-root {
-        background-color: var(--accent-color) !important;
-        border-color: var(--accent-color) !important;
-        color: #fff !important;
-        transition: all 0.2s ease-in-out;
-      }
-
-      button:not(.mantine-ColorSwatch-root):hover,
-      .mantine-Button-root:hover {
-        filter: brightness(1.15) drop-shadow(0 0 6px var(--accent-color));
-      }
-
-      /* === NEW: make selected swatch ring and focus pink === */
+      /* Selected swatch ring + keyboard focus in pink (kills Mantine's red) */
       .mantine-ColorSwatch-root[data-checked="true"],
-      .mantine-ColorPicker-swatch[data-checked="true"] {
-        outline: 2px solid var(--accent-color) !important;
-        box-shadow: 0 0 6px var(--accent-color) !important;
-        border-color: var(--accent-color) !important;
-      }
-
+      .mantine-ColorPicker-swatch[data-checked="true"],
       .mantine-ColorSwatch-root:focus-visible,
       .mantine-ColorPicker-swatch:focus-visible {
         outline: 2px solid var(--accent-color) !important;
         box-shadow: 0 0 6px var(--accent-color) !important;
+        border-color: var(--accent-color) !important;
       }
 
-      /* === NEW: slider highlights stay pink === */
-      .mantine-Slider-bar,
-      .mantine-Slider-thumb,
-      .mantine-Slider-track[data-inverted="true"] .mantine-Slider-bar {
-        background-color: var(--accent-color) !important;
-      }
+      /* Solid black panels */
+      .mantine-Paper-root,
+      .mantine-Accordion-item,
+      .mantine-Modal-body { background: #000 !important; border: none !important; }
+
+      .mantine-Overlay-root,
+      .mantine-Modal-overlay { background: rgba(0,0,0,1) !important; }
     </style>
   </head>
 
