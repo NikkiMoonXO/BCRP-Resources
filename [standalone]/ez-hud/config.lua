@@ -1,7 +1,7 @@
 Config = {}
 
 Config.useMPH = true
-Config.minimapWalking = true
+Config.minimapWalking = false
 Config.minimapAlwaysOn = true -- Keep minimap always visible
 Config.fixMinimapZoom = true -- Fix minimap zoom jumping/glitching
 Config.minimapZoom = 1000 -- Fixed zoom level (higher = more zoomed out)
