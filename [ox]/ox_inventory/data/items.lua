@@ -784,4 +784,37 @@ return {
         }
     },
 
+    ["casino_chip"] = {
+        label = "Betting Chips",
+        weight = "3",
+        stack = true,
+        close = false,
+        description = "Diamond Casino Chips",
+        client = {
+            image = "casino_chip.png"
+        }
+    },
+
+    ["casino_member"] = {
+        label = "Member Card",
+        weight = "50",
+        stack = false,
+        close = false,
+        description = "Diamond Casino Membership Card",
+        client = {
+            image = "casino_member.png"
+        }
+    },
+
+    ["casino_vip"] = {
+        label = "V.I.P Pass",
+        weight = "70",
+        stack = false,
+        close = false,
+        description = "Diamond Casino V.I.P ALL ACCESS Pass",
+        client = {
+            image = "casino_vip.png"
+        }
+    },
+
 }
