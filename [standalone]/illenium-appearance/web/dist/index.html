@@ -1,17 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI</title>
-  <script type="module" crossorigin src="./assets/index.b8e72b46.js"></script>
-</head>
 
-<body>
+    <!-- main build -->
+    <script type="module" crossorigin src="./assets/index.b8e72b46.js"></script>
+
+    <!-- === Candy's Hot Pink Overhaul === -->
+    <style>
+      :root {
+        --accent-color: #f00081 !important;
+      }
+
+      /* Inputs and selects */
+      input,
+      select,
+      textarea {
+        background: #000 !important;
+        color: #fff !important;
+        border: 1px solid #2b2b2b !important;
+        border-radius: 6px !important;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: 2px solid var(--accent-color) !important;
+        box-shadow: 0 0 0 2px var(--accent-color) !important;
+        border-color: var(--accent-color) !important;
+      }
+
+      /* Sliders and highlights */
+      .mantine-Slider-bar,
+      .mantine-Slider-thumb {
+        background-color: var(--accent-color) !important;
+      }
+
+      /* Accordion headers (Ped / Face / Hair etc.) */
+      .mantine-Accordion-control[data-active="true"],
+      .mantine-Accordion-itemOpened .mantine-Accordion-control,
+      .mantine-Accordion-control:hover {
+        background-color: var(--accent-color) !important;
+        color: #fff !important;
+      }
+
+      /* Save/Cancel buttons */
+      button,
+      .mantine-Button-root {
+        background-color: var(--accent-color) !important;
+        border-color: var(--accent-color) !important;
+        color: #fff !important;
+        transition: all 0.2s ease-in-out;
+      }
+
+      button:hover,
+      .mantine-Button-root:hover {
+        filter: brightness(1.15) drop-shadow(0 0 6px var(--accent-color));
+      }
+
+      /* Checkbox / toggle accent */
+      .mantine-Switch-track[data-checked="true"],
+      .mantine-Switch-thumb[data-checked="true"] {
+        background-color: var(--accent-color) !important;
+        border-color: var(--accent-color) !important;
+      }
+
+      /* Range input glow */
+      input[type="range"]::-webkit-slider-thumb {
+        background-color: var(--accent-color) !important;
+      }
+    </style>
+  </head>
+
+  <body>
     <div id="root"></div>
-    
-</body>
-
+  </body>
 </html>
