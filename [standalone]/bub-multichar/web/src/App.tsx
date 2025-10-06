@@ -221,12 +221,12 @@ function App() {
 				<div className='container'>
 					{visible && (
 						<div className='character-selector-top'>
-							<IconUsersGroup size={45} color='#228be6' />
-							<Title order={2} fz={32} c={"blue"}>
-								Character Selector
+							<IconUsersGroup size={45} color='#F00081' />
+							<Title order={2} fz={32} c={"#F00081"}>
+								BitCrush RP
 							</Title>
 							<Text fw={500} fz={14}>
-								Select the character you want to play
+								Select your character
 							</Text>
 						</div>
 					)}
@@ -242,7 +242,7 @@ function App() {
 												<Group justify='space-between'>
 													<Text fw={500}>{character.name}</Text>
 													<Badge
-														color='rgba(196, 196, 196, 1)'
+														color='#000000'
 														variant='light'
 														radius='sm'
 													>
@@ -267,11 +267,11 @@ function App() {
 															))}
 													</SimpleGrid>
 
-													<Divider color='gray' />
+													<Divider color='#000000' />
 
 													<div className='character-card-actions'>
 														<Button
-															color='green'
+															color='#F00081'
 															variant='light'
 															fullWidth
 															leftSection={<IconPlayerPlay size={14} />}
@@ -284,7 +284,7 @@ function App() {
 														</Button>
 
 														<Button
-															color='red'
+															color='#F00081'
 															variant='light'
 															fullWidth
 															leftSection={<IconTrash size={14} />}
@@ -304,7 +304,7 @@ function App() {
 													}
 												>
 													<Button
-														color='blue'
+														color='#F00081'
 														variant='light'
 														fullWidth
 														h={30}
@@ -322,7 +322,7 @@ function App() {
 												key={`create-${index}`}
 											>
 												<Button
-													color='blue'
+													color='#F00081'
 													variant='light'
 													fullWidth
 													leftSection={<IconPlus size={24} />}

@@ -1,6 +1,7 @@
 :root {
-  --main-bg-color: #1c1d1f;
-  --main-text-color: #fff;
+  --main-bg-color: #000000;
+  --main-text-color: #ffffff;
+  --accent-color: #F00081;
   color-scheme: white !important;
 }
 
