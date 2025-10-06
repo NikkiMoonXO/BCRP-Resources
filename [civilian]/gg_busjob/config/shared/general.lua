@@ -63,9 +63,7 @@ cfg.DailyBonusChallenge = {
         experience = 500, -- Experience points given on challenge completion
     },
     items = {
-        { item = "plastic", probability_weight = 50, min = 10, max = 20 },
-        { item = "glass", probability_weight = 25, min = 10, max = 20 },
-        { item = "copper", probability_weight = 15, min = 10, max = 20 },
+        { item = "civilian_case", probability_weight = 50, min = 1, max = 1 },
     },
 }
 
