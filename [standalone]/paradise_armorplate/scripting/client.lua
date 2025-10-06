@@ -48,7 +48,7 @@ local function ApplyArmorPlate(plateType)
         return
     end
     
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = armorConfig.useTime,
         label = 'Applying Armor Plate...',
         useWhileDead = false,
