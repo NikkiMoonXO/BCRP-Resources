@@ -818,6 +818,21 @@ function CreatePlayer(playerData, Offline)
         return AddMoney(self.PlayerData.source, moneytype, amount, reason)
     end
 
+    -- OTHERS CODE
+if not self.Offline then
+    -- OTHERS CODE
+    if moneytype == 'bank' then
+        MySQL.Async.insert('INSERT INTO bank_statements (citizenid, account_name, amount, reason, statement_type) VALUES (?, ?, ?, ?, ?)', {
+            self.PlayerData.citizenid,
+            'checking',
+            amount,
+            reason,
+            'deposit'
+        })
+    end
+    -- OTHERS CODE
+end
+
     ---@param moneytype MoneyType
     ---@param amount number
     ---@param reason? string
@@ -825,6 +840,22 @@ function CreatePlayer(playerData, Offline)
     function self.Functions.RemoveMoney(moneytype, amount, reason)
         return RemoveMoney(self.PlayerData.source, moneytype, amount, reason)
     end
+
+    -- OTHERS CODE
+if not self.Offline then
+    -- OTHERS CODE
+   if moneytype == 'bank' then
+        MySQL.Async.insert('INSERT INTO bank_statements (citizenid, account_name, amount, reason, statement_type) VALUES (?, ?, ?, ?, ?)', {
+            self.PlayerData.citizenid,
+            'checking',
+            amount,
+            reason,
+            'withdraw'
+        })
+        TriggerClientEvent('qb-phone:client:RemoveBankMoney', self.PlayerData.source, amount)
+    end
+    -- OTHERS CODE
+end
 
     ---@param moneytype MoneyType
     ---@param amount number
