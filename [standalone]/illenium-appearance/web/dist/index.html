@@ -1,111 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clothing Menu</title>
+    <title>UI</title>
+  <script type="module" crossorigin src="./assets/index.b8e72b46.js"></script>
+</head>
 
-    <!-- existing CSS or favicon links go here -->
-    <link rel="stylesheet" href="assets/index.b8e72b46.css" />
-
-    <style>
-      /* === Candy’s Hot Black & Pink Makeover === */
-
-      html, body {
-        background-color: #000 !important;
-        color: #fff !important;
-        font-family: "Inter", sans-serif;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-
-      /* Dark base for panels, menus, and containers */
-      [class*="menu"],
-      [class*="panel"],
-      [class*="container"],
-      [class*="content"],
-      [class*="sidebar"] {
-        background-color: rgba(0, 0, 0, 0.85) !important;
-        color: #fff !important;
-      }
-
-      /* Pink accent for actives, highlights, and buttons */
-      [class*="active"],
-      [class*="selected"],
-      [class*="highlight"],
-      [class*="accent"],
-      [class*="button"]:hover,
-      [class*="button"]:focus,
-      [class*="toggle"].on {
-        background-color: #F00081 !important;
-        border-color: #F00081 !important;
-        color: #fff !important;
-      }
-
-      /* Dropdowns and select lists */
-      [class*="dropdown"],
-      [class*="select"],
-      [class*="menu-list"],
-      [class*="option-list"] {
-        background-color: rgba(0, 0, 0, 0.95) !important;
-        color: #fff !important;
-      }
-
-      /* Inputs, sliders, etc. */
-      input, select, textarea {
-        background-color: rgba(20, 20, 20, 0.9) !important;
-        color: #fff !important;
-        border: 1px solid #F00081 !important;
-        border-radius: 6px;
-      }
-
-      /* Keep color swatches pure and untinted */
-      [class*="swatch"],
-      [class*="color-picker"],
-      [class*="color-sample"] {
-        background: unset !important;
-        filter: none !important;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-      }
-
-      /* Optional: subtle pink glow when hovering */
-      [class*="button"]:hover,
-      [class*="menu-item"]:hover {
-        box-shadow: 0 0 8px #F00081;
-      }
-
-      /* Header / title styling */
-      [class*="header"],
-      [class*="title"],
-      h1, h2, h3, h4 {
-        color: #F00081 !important;
-        letter-spacing: 0.5px;
-      }
-
-      /* Scrollbars (because yes, details matter) */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #F00081;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #111;
-      }
-
-      /* Hide debug elements if any */
-      [class*="debug"] {
-        display: none !important;
-      }
-    </style>
-  </head>
-
-  <body>
+<body>
     <div id="root"></div>
+    
+</body>
 
-    <!-- your bundled app -->
-    <script type="module" src="assets/index.b8e72b46.js"></script>
-  </body>
 </html>
