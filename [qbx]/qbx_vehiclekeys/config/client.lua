@@ -7,20 +7,20 @@
 
 ---@type SkillCheckConfig
 local easyLockpickSkillCheck = {
-    difficulty = { 'easy', 'easy', { areaSize = 60, speedMultiplier = 1 }, 'medium' },
+    difficulty = { 'easy', 'easy', { areaSize = 60, speedMultiplier = 1 }, 'easy' },
     inputs = { '1', '2', '3' }
 }
 
 ---@type SkillCheckConfig
 local normalLockpickSkillCheck = {
     difficulty = { 'easy', 'easy', { areaSize = 60, speedMultiplier = 1 }, 'medium' },
-    inputs = { '1', '2', '3', '4' }
+    inputs = { '1', '2', '3' }
 }
 
 ---@type SkillCheckConfig
 local hardLockpickSkillCheck = {
     difficulty = { 'easy', 'easy', { areaSize = 60, speedMultiplier = 2 }, 'medium' },
-    inputs = { '1', '2', '3', '4' }
+    inputs = { '1', '2', '3' }
 }
 
 return {
@@ -29,18 +29,18 @@ return {
     keepEngineOnWhenAbandoned = true, -- when enabled, keeps a vehicle's engine running after exiting
 
     -- Carjack Settings
-    carjackEnable = true,                -- Enables the ability to carjack pedestrian vehicles, stealing them by pointing a weapon at them
+    carjackEnable = false,                -- Enables the ability to carjack pedestrian vehicles, stealing them by pointing a weapon at them
     carjackingTimeInMs = 7500,           -- Time it takes to successfully carjack in miliseconds
     delayBetweenCarjackingsInMs = 10000, -- Time before you can attempt another carjack in miliseconds
 
     -- Hotwire Settings
-    timeBetweenHotwires = 5000, -- Time in milliseconds between hotwire attempts
-    minKeysSearchTime = 20000,  -- Minimum hotwire time in milliseconds
-    maxKeysSearchTime = 40000,  -- Maximum hotwire time in milliseconds
+    timeBetweenHotwires = 3000, -- Time in milliseconds between hotwire attempts
+    minKeysSearchTime = 10000,  -- Minimum hotwire time in milliseconds
+    maxKeysSearchTime = 20000,  -- Maximum hotwire time in milliseconds
 
     -- Police Alert Settings
     alertCooldown = 10000,         -- Cooldown period in milliseconds (10 seconds)
-    policeAlertChance = 0.75,      -- Chance of alerting the police during the day
+    policeAlertChance = 0.25,      -- Chance of alerting the police during the day
     policeNightAlertChance = 0.50, -- Chance of alerting the police at night (times: 01-06)
     policeAlertNightStartHour = 1,
     policeAlertNightDuration = 5,
@@ -109,10 +109,10 @@ return {
             class = {
                 [VehicleClass.PLANES] = hardLockpickSkillCheck,
                 [VehicleClass.HELICOPTERS] = hardLockpickSkillCheck,
-                [VehicleClass.EMERGENCY] = hardLockpickSkillCheck,
+                [VehicleClass.EMERGENCY] = {}, -- cannot be lockpicked
                 [VehicleClass.MILITARY] = {}, -- cannot be lockpicked
                 [VehicleClass.TRAINS] = {}, -- cannot be lockpicked
-                [VehicleClass.OPEN_WHEEL] = easyLockpickSkillCheck,
+                [VehicleClass.OPEN_WHEEL] = {}, -- cannot be lockpicked
             },
             model = {}
         },
@@ -121,7 +121,7 @@ return {
             class = {
                 [VehicleClass.PLANES] = hardLockpickSkillCheck,
                 [VehicleClass.HELICOPTERS] = hardLockpickSkillCheck,
-                [VehicleClass.EMERGENCY] = hardLockpickSkillCheck,
+                [VehicleClass.EMERGENCY] = {}, -- cannot be lockpicked
                 [VehicleClass.MILITARY] = {}, -- cannot be lockpicked
                 [VehicleClass.TRAINS] = {}, -- cannot be lockpicked
             },
@@ -132,10 +132,10 @@ return {
             class = {
                 [VehicleClass.PLANES] = hardLockpickSkillCheck,
                 [VehicleClass.HELICOPTERS] = hardLockpickSkillCheck,
-                [VehicleClass.EMERGENCY] = hardLockpickSkillCheck,
+                [VehicleClass.EMERGENCY] = {}, -- cannot be lockpicked
                 [VehicleClass.MILITARY] = {}, -- cannot be hotwired
                 [VehicleClass.TRAINS] = {}, -- cannot be hotwired
-                [VehicleClass.OPEN_WHEEL] = easyLockpickSkillCheck,
+                [VehicleClass.OPEN_WHEEL] = {}, -- cannot be lockpicked
             },
             model = {}
         },
@@ -144,7 +144,7 @@ return {
             class = {
                 [VehicleClass.PLANES] = hardLockpickSkillCheck,
                 [VehicleClass.HELICOPTERS] = hardLockpickSkillCheck,
-                [VehicleClass.EMERGENCY] = hardLockpickSkillCheck,
+                [VehicleClass.EMERGENCY] = {}, -- cannot be lockpicked
                 [VehicleClass.MILITARY] = {}, -- cannot be hotwired
                 [VehicleClass.TRAINS] = {}, -- cannot be hotwired
             },
@@ -202,7 +202,7 @@ return {
             default = {
                 dict = 'oddjobs@towing',
                 clip = 'start_engine',
-                delay = 400, -- how long it takes to start the engine
+                delay = 200, -- how long it takes to start the engine
             },
             class = {
                 [VehicleClass.MOTORCYCLES] = {

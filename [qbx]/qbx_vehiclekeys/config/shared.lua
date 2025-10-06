@@ -28,16 +28,27 @@ return {
         },
         ---@type table<string, VehicleConfig>
         categories = { -- known categories: super, service, utility, helicopters, motorcycles, suvs, planes, sports, emergency, military, sportsclassics, compacts, sedans
-            -- super = {
-            --     noLock = false,
-            --     spawnLockedIfParked = 1.0,
-            --     carjackingImmune = false,
-            --     lockpickImmune = false,
-            --     shared = false,
-            --     removeNormalLockpickChance = 1.0,
-            --     removeAdvancedLockpickChance = 1.0,
-            --     findKeysChance = 0.5,
-            -- }
+            super = {
+                noLock = false,
+                spawnLockedIfParked = 1.0,
+                carjackingImmune = true,
+                lockpickImmune = true,
+                shared = false,
+                removeNormalLockpickChance = 1.0,
+                removeAdvancedLockpickChance = 1.0,
+                findKeysChance = 0.2,
+            },
+            sports = {
+                noLock = false,
+                spawnLockedIfParked = 1.0,
+                spawnLockedIfDriven = 0.75,
+                carjackingImmune = true,
+                lockpickImmune = false,
+                shared = false,
+                removeNormalLockpickChance = 1.0,
+                removeAdvancedLockpickChance = 1.0,
+                findKeysChance = 0.5,
+            },
         },
         ---@type table<VehicleType, VehicleConfig>
         types = { -- known types: automobile, bike, boat, heli, plane, submarine, trailer, train
