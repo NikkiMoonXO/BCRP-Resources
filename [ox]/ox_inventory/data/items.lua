@@ -638,7 +638,7 @@ return {
         label = 'Armor Plate',
         weight = 1000,
         stack = true,
-        description = 'A basic armor plate for street protection',
+        description = 'A Basic Armor Plate',
         client = {
             image = "armorplate.png",
         }
@@ -648,7 +648,7 @@ return {
         label = 'Police Armor Plate',
         weight = 1000,
         stack = true,
-        description = 'High-quality police-grade armor plate',
+        description = 'High-Quality Armor Plate',
         client = {
             image = "armorplate.png",
         }

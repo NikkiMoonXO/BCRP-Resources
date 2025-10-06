@@ -3,5 +3,5 @@
 ---@field fluctuatePrices boolean whether or not prices should fluctuate when the shop is restocked (registered)
 return {
 	debug = false,
-	fluctuatePrices = true,
+	fluctuatePrices = false,
 }

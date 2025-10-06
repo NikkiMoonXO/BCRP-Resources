@@ -3,7 +3,7 @@
 ---@field name? string item name as referenced in ox_inventory
 ---@field price number base price of the item
 ---@field defaultStock? integer the amount of items available in the shop by default
----@field category? string the category of the item in the shop (e.g. 'Snacks', 'Tools', 'Firearms', 'Ammunition', 'Drinks')
+---@field category? string the category of the item in the shop (e.g. 'Snacks', 'Tools', 'Firearms', 'Ammunition', 'Drinks', 'Protection')
 ---@field license? string the license required to purchase the item
 ---@field jobs? table<string, number> map of group names to min grade required to access the shop
 ---@field metadata? table | string metadata for item
@@ -32,6 +32,8 @@ local ITEMS = {
 	weapons = {
 		{ name = 'WEAPON_KNIFE',      price = 500,   defaultStock = 50,        category = 'Point Defense' },
 		{ name = 'WEAPON_BAT',        price = 800,   defaultStock = 50,        category = 'Point Defense' },
+		{ name = 'armor_vest',        price = 1500,   defaultStock = 50,        category = 'Protection' },
+		{ name = 'armor_plate1',      price = 250,   defaultStock = 500,        category = 'Protection' },
 		{ name = 'WEAPON_PISTOL',     price = 2500,  defaultStock = 20,          license = "weapon",        category = 'Firearms' },
 		{ name = 'ammo-9',            price = 5,     defaultStock = 9500,       license = "weapon",        category = 'Ammunition' },
 	},
