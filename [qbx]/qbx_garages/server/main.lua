@@ -20,6 +20,14 @@ local function TableContains (tab, val)
     return false
 end
 
+lib.callback.register('qbx_garages:server:getGarages', function()
+    return Garages
+end)
+
+local function getGarages()
+    return Garages
+end
+exports('GetGarages', getGarages)
 
 lib.callback.register("qb-garage:server:GetOutsideVehicle", function(source, plate)
     local pData = exports.qbx_core:GetPlayer(source)

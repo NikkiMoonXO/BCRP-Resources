@@ -1025,3 +1025,10 @@ CreateThread(function()
         end
     end
 end)
+
+local function createGarages()
+    local garages = lib.callback.await('qbx_garages:server:getGarages')
+    for name, garage in pairs(garages) do
+        createGarage(name, garage)
+    end
+end
