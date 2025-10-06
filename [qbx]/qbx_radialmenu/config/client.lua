@@ -11,22 +11,10 @@ return {
             label = 'Citizen',
             items = {
                 {
-                    id = 'givenum',
-                    icon = 'address-book',
-                    label = 'Give Contact Details',
-                    event = 'qb-phone:client:GiveContactDetails'
-                },
-                {
                     id = 'getintrunk',
                     icon = 'car',
                     label = 'Get In Trunk',
                     event = 'qb-trunk:client:GetIn'
-                },
-                {
-                    id = 'cornerselling',
-                    icon = 'cannabis',
-                    label = 'Corner Selling',
-                    event = 'qb-drugs:client:cornerselling'
                 },
                 {
                     id = 'interactions',
