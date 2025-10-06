@@ -15,7 +15,7 @@ cfg.vehicles = {
         label = "Bus",
         image = "vehicles/bus.png",
         level = 6,
-        price = 1000,
+        price = 15000,
         seats = 14,
     },
     {
@@ -23,7 +23,7 @@ cfg.vehicles = {
         label = "Air Bus",
         image = "vehicles/airbus.png",
         level = 6,
-        price = 1000,
+        price = 25000,
         seats = 14,
     },
 }
