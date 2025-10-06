@@ -1,0 +1,15 @@
+{
+  "StoreAccessDeniedLicense": "StoreAccessDeniedLicense",
+  "StoreAccessDenied": "StoreAccessDenied",
+  "TransactionComplete": "Transaction Complete",
+  "ESCAPE": "ESCAPE",
+  "StoreAccessDeniedGroup": "StoreAccessDeniedGroup",
+  "TransactionCompleteMessage": "Thank you for shopping with us!",
+  "GroupRestricted": "GroupRestricted",
+  "CLOSE": "CLOSE",
+  "LicenseRestricted": "LicenseRestricted",
+  "StoreAccessDeniedDesc": "StoreAccessDeniedDesc",
+  "Payment": "Payment",
+  "DontHaveItem": "DontHaveItem",
+  "OpenStore": "Open Store"
+}
