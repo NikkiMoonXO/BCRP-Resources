@@ -60,7 +60,7 @@ Config.Jobs = {
         image = 'images/bus.png',
         description = 'Transport passengers around the City.',
         color = '228B22',
-        coords = vector3(452.7, -614.84, 28.58),
+        coords = vector3(449.55, -650.86, 28.48),
     },
 }
 
