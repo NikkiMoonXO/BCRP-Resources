@@ -1,0 +1,63 @@
+/* === Chat/Shop unified color palette === */
+:root {
+  /* Core chat palette */
+  --chat-bg:        0 0% 6%;       /* deep background */
+  --chat-surface:   0 0% 10%;      /* card/panel surfaces */
+  --chat-ink:       0 0% 96%;      /* primary text */
+  --chat-muted-ink: 0 0% 64%;      /* secondary text */
+  --chat-accent:    324 100% 47%;  /* #F00081 – hot pink */
+  --chat-danger:    0 63% 31%;     /* red for destructive actions */
+}
+
+/* Map to Tailwind-like design tokens (index-BtncY4My.css uses these) */
+:root {
+  --background:             var(--chat-bg);
+  --foreground:             var(--chat-ink);
+  --card:                   var(--chat-surface);
+  --card-foreground:        var(--chat-ink);
+  --popover:                var(--chat-surface);
+  --popover-foreground:     var(--chat-ink);
+  --primary:                var(--chat-accent);
+  --primary-foreground:     0 0% 9%;
+  --secondary:              0 0% 15%;
+  --secondary-foreground:   var(--chat-ink);
+  --muted:                  0 0% 15%;
+  --muted-foreground:       var(--chat-muted-ink);
+  --accent:                 0 0% 15%;
+  --accent-foreground:      var(--chat-ink);
+  --destructive:            var(--chat-danger);
+  --destructive-foreground: 0 0% 98%;
+  --border:                 0 0% 15%;
+  --input:                  0 0% 15%;
+  --ring:                   324 100% 47%; /* use accent hue for focus rings */
+  --radius:                 .5rem;
+}
+
+/* Mantine variable overrides (mantine-CFg9D_xD.css) */
+:root[data-mantine-color-scheme="dark"] {
+  --mantine-primary-color-filled:        hsl(var(--chat-accent));
+  --mantine-primary-color-filled-hover:  hsl(var(--chat-accent) / 0.85);
+  --mantine-color-body:                  hsl(var(--chat-bg));
+  --mantine-color-text:                  hsl(var(--chat-ink));
+  --mantine-color-dark-6:                hsl(var(--chat-surface));
+  --mantine-color-dark-7:                hsl(var(--chat-bg));
+  --mantine-color-dark-4:                hsl(var(--border));
+}
+
+/* Accent for Mantine ActionIcon/Button */
+.m_8d3f4000 {
+  --ai-bg:    hsl(var(--chat-accent));
+  --ai-color: var(--mantine-color-white);
+}
+
+/* Card / panel look */
+.m_1b7284a3 {
+  background-color: hsl(var(--chat-surface));
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 0.5rem 1rem hsl(0 0% 0% / 0.2);
+}
+
+/* Global font: Geist Variable */
+:root, body, button, input, textarea {
+  font-family: "Geist Variable", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
