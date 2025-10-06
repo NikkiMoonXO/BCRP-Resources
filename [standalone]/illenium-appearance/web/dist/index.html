@@ -9,7 +9,7 @@
     <!-- main build -->
     <script type="module" crossorigin src="./assets/index.b8e72b46.js"></script>
 
-    <!-- === Candy's Full Pink Overhaul (Fixed Swatches Edition) === -->
+    <!-- === Candy's Full Pink Takeover === -->
     <style>
       :root {
         --accent-color: #f00081 !important;
@@ -21,6 +21,19 @@
       .mantine-Accordion-control:hover {
         background-color: var(--accent-color) !important;
         color: #fff !important;
+      }
+
+      /* Right-side action buttons (icons) */
+      .mantine-ActionIcon-root,
+      .mantine-Button-root[data-variant="filled"] {
+        background-color: var(--accent-color) !important;
+        border-color: var(--accent-color) !important;
+        color: #fff !important;
+      }
+
+      .mantine-ActionIcon-root:hover,
+      .mantine-Button-root[data-variant="filled"]:hover {
+        filter: brightness(1.15) drop-shadow(0 0 6px var(--accent-color));
       }
 
       /* Inputs and select boxes */
@@ -63,36 +76,18 @@
         border-color: var(--accent-color) !important;
       }
 
-      /* Buttons (Save, Cancel) — filled variant only, NOT color swatches */
-      .mantine-Button-root[data-variant="filled"]:not(.mantine-ColorSwatch-root) {
+      /* Buttons (Save, Cancel) */
+      button,
+      .mantine-Button-root {
         background-color: var(--accent-color) !important;
         border-color: var(--accent-color) !important;
         color: #fff !important;
         transition: all 0.2s ease-in-out;
       }
 
-      .mantine-Button-root[data-variant="filled"]:not(.mantine-ColorSwatch-root):hover {
+      button:hover,
+      .mantine-Button-root:hover {
         filter: brightness(1.15) drop-shadow(0 0 6px var(--accent-color));
-      }
-
-      /* Right-side action icons — NOT color swatches */
-      .mantine-ActionIcon-root:not(.mantine-ColorSwatch-root) {
-        background-color: var(--accent-color) !important;
-        border-color: var(--accent-color) !important;
-        color: #fff !important;
-      }
-
-      .mantine-ActionIcon-root:not(.mantine-ColorSwatch-root):hover {
-        filter: brightness(1.15) drop-shadow(0 0 6px var(--accent-color));
-      }
-
-      /* Ensure swatches display their true colors */
-      .mantine-ColorSwatch-root,
-      .mantine-ColorPicker-swatch,
-      button.mantine-ColorSwatch-root {
-        background: inherit !important; /* keeps intended color */
-        box-shadow: none !important;
-        border-color: rgba(255, 255, 255, 0.15) !important; /* subtle outline only */
       }
     </style>
   </head>
