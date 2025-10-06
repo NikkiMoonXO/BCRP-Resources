@@ -1,0 +1,21 @@
+{
+  "error": {
+    "opening_canceled": "Parcel opening canceled.",
+    "package_already_taken": "This package has already been taken by someone else."
+  },
+  "success": {
+    "parcel_opened": "Parcel opened successfully!"
+  },
+  "target": {
+    "take_box": "Take Box"
+  },
+  "progress": {
+    "opening_parcel": "Opening parcel..."
+  },
+  "prints": {
+    "package_already_taken": "Player {source} tried to take a package that has already been taken.",
+    "package_already_taken_drop_reason": "Attempted to take a package that has already been taken.",
+    "out_of_range":           "Player {source} is out of range for the package at location {location}",
+    "out_of_range_drop_reason": "Attempted to take a package while out of range."
+  }
+}

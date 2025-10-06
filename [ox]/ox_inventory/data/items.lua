@@ -663,4 +663,19 @@ return {
             image = "armor_vest.png",
         }
     },
+
+    ["parcel"] = {
+		label = "Parcel",
+		weight = 350,
+		stack = false,
+		close = true,
+		consume = 0,
+		description = "Small Package.",
+		client = {
+			image = "parcel.png",
+		},
+		server = {
+			export = 'sd-parceltheft.useParcel'
+		}
+	},
 }
