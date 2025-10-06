@@ -11,7 +11,7 @@ return {
         [8] = true,     -- PoliceRoadBlock
         [9] = false,    -- PoliceAutomobileWaitPulledOver
         [10] = false,   -- PoliceAutomobileWaitCruising
-        [11] = false,   -- Gangs
+        [11] = true,   -- Gangs
         [12] = false,   -- SwatHelicopter
         [13] = false,   -- PoliceBoat
         [14] = false,   -- ArmyVehicle
