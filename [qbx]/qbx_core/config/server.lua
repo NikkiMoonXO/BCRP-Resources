@@ -107,6 +107,7 @@ return {
             ['ooc'] = 'https://discord.com/api/webhooks/1424741853336436737/-L9wdF0EE-MYI6LyKOWokeTtn7lcz_tlQ-P4Asz08VyoqNFvm8jZClM-zth4jHXNvDqO', -- default
             ['anticheat'] = 'https://discord.com/api/webhooks/1424741937772232795/yC2aDVIS0-Kp1CyxnJqC37v-M-r9TSAtrHB2eFa8rbnmMT6As5ikyGDHwWvSD3ta4nxz', -- default
             ['playermoney'] = 'https://discord.com/api/webhooks/1424742029010669698/4iAm1QMVkcbMUZX_FGH95kkDh34du_KMJ8GqKMmxlDoRXd_gH_cc1FicZMUiiC7FqxV0', -- default
+            ['ps-adminmenu'] = 'https://discord.com/api/webhooks/1424776034980593725/Mdgl5IjIYZK0H5guQcd16e-owNup9DwXj3k89Z2_K6pwY1hUnEsvhZiXEwluVPT-N7kA',
         },
         role = {} -- Role to tag for high priority logs. Roles use <@%roleid> and users/channels are <@userid/channelid>
     },
