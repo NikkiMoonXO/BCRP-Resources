@@ -44,7 +44,7 @@ RegisterNetEvent('police:client:spawnPObj', function(item)
 
     if cache.vehicle then return exports.qbx_core:Notify(locale('error.in_vehicle'), 'error') end
 
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = 2500,
         label = locale('progressbar.place_object'),
         useWhileDead = false,
@@ -79,7 +79,7 @@ end)
 RegisterNetEvent('police:client:deleteObject', function()
     local objectId = getClosestObject(GlobalState.policeObjects, GetEntityCoords(cache.ped) , 5.0)
     if not objectId then return end
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = 2500,
         label = locale('progressbar.remove_object'),
         useWhileDead = false,
@@ -110,7 +110,7 @@ RegisterNetEvent('police:client:SpawnSpikeStrip', function()
 
     if cache.vehicle then return exports.qbx_core:Notify(locale('error.in_vehicle'), 'error') end
 
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = 2500,
         label = locale('progressbar.place_object'),
         useWhileDead = false,
@@ -241,7 +241,7 @@ local function onPressed()
     keybind:disable(true)
     local spike = getClosestObject(GlobalState.spikeStrips, GetEntityCoords(cache.ped), 4, true)
     if spike ~= nil then
-        if lib.progressBar({
+        if lib.progressCircle({
             duration = 2500,
             label = locale('progressbar.remove_object'),
             useWhileDead = false,

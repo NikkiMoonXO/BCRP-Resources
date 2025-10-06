@@ -279,7 +279,7 @@ RegisterNetEvent('qb-tow:client:TowVehicle', function()
                     local towPos = GetEntityCoords(vehicle)
                     local targetPos = GetEntityCoords(targetVehicle)
                     if #(towPos - targetPos) < 11.0 then
-                        if lib.progressBar({
+                        if lib.progressCircle({
                             duration = 5000,
                             label = locale("mission.towing_vehicle"),
                             useWhileDead = false,
@@ -317,7 +317,7 @@ RegisterNetEvent('qb-tow:client:TowVehicle', function()
                 end
             end
         else
-            if lib.progressBar({
+            if lib.progressCircle({
                 duration = 5000,
                 label = locale("mission.untowing_vehicle"),
                 useWhileDead = false,

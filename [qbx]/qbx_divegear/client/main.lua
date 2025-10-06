@@ -24,7 +24,7 @@ lib.callback.register('qbx_divegear:client:fillTank', function()
         return false
     end
 
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = config.refillTankTimeMs,
         label = locale('info.filling_air'),
         useWhileDead = false,
@@ -76,7 +76,7 @@ local function attachGear()
 end
 
 local function takeOffSuit()
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = config.takeOffSuitTimeMs,
         label = locale('info.pullout_suit'),
         useWhileDead = false,
@@ -140,7 +140,7 @@ local function putOnSuit()
         return
     end
 
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = config.putOnSuitTimeMs,
         label = locale('info.put_suit'),
         useWhileDead = false,

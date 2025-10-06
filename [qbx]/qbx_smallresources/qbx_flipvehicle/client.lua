@@ -13,7 +13,7 @@ local function flipVehicle(vehicle, flipTest)
         return exports.qbx_core:Notify(locale('error.no_vehicle_nearby'), 'error')
     end
 
-    if flipTest or lib.progressBar({
+    if flipTest or lib.progressCircle({
         label = locale('progress.flipping_car'),
         duration = config.flipingTime,
         useWhileDead = false,

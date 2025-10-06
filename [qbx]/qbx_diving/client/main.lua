@@ -13,7 +13,7 @@ local blips = {}
 
 local function takeCoral(coralIndex)
     local times = math.random(2, 5)
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = times * 1000,
         label = locale('info.collecting_coral'),
         canCancel = true,
@@ -134,7 +134,7 @@ local function setDivingLocation(areaIndex, pickedUpCoralIndexes)
 end
 
 local function sellCoral()
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = math.random(2000, 4000),
         label = locale('info.checking_pockets'),
         useWhileDead = false,

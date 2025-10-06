@@ -146,7 +146,7 @@ local function smokeWeed()
 end
 
 lib.callback.register('consumables:client:Eat', function(anim, prop)
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = 5000,
         label = locale('progress.eating'),
         useWhileDead = false,
@@ -179,7 +179,7 @@ lib.callback.register('consumables:client:Eat', function(anim, prop)
 end)
 
 lib.callback.register('consumables:client:Drink', function(anim, prop)
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = 5000,
         label = locale('progress.drinking'),
         useWhileDead = false,
@@ -212,7 +212,7 @@ lib.callback.register('consumables:client:Drink', function(anim, prop)
 end)
 
 lib.callback.register('consumables:client:DrinkAlcohol', function(alcoholLevel, anim, prop)
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = math.random(3000, 6000),
         label = locale('progress.drinking_liquor'),
         useWhileDead = false,
@@ -251,7 +251,7 @@ lib.callback.register('consumables:client:DrinkAlcohol', function(alcoholLevel, 
 end)
 
 RegisterNetEvent('consumables:client:Cokebaggy', function()
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = math.random(5000, 8000),
         label = locale('progress.popping_pills'),
         useWhileDead = false,
@@ -279,7 +279,7 @@ RegisterNetEvent('consumables:client:Cokebaggy', function()
 end)
 
 RegisterNetEvent('consumables:client:Crackbaggy', function()
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = math.random(7000, 10000),
         label = locale('progress.smoking_crack'),
         useWhileDead = false,
@@ -307,7 +307,7 @@ RegisterNetEvent('consumables:client:Crackbaggy', function()
 end)
 
 RegisterNetEvent('consumables:client:EcstasyBaggy', function()
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = 3000,
         label = locale('progress.popping_pills'),
         useWhileDead = false,
@@ -334,7 +334,7 @@ RegisterNetEvent('consumables:client:EcstasyBaggy', function()
 end)
 
 RegisterNetEvent('consumables:client:oxy', function()
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = 2000,
         label = locale('progress.healing'),
         useWhileDead = false,
@@ -362,7 +362,7 @@ RegisterNetEvent('consumables:client:oxy', function()
 end)
 
 RegisterNetEvent('consumables:client:meth', function()
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = 1500,
         label = locale('progress.smoking_meth'),
         useWhileDead = false,
@@ -391,7 +391,7 @@ RegisterNetEvent('consumables:client:meth', function()
 end)
 
 RegisterNetEvent('consumables:client:UseJoint', function()
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = 1500,
         label = locale('progress.lighting_joint'),
         useWhileDead = false,

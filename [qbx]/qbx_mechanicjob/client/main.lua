@@ -332,7 +332,7 @@ local function repairPart(part)
     end
 
     exports.scully_emotemenu:playEmoteByCommand('mechanic')
-    if lib.progressBar({
+    if lib.progressCircle({
         duration = math.random(5000, 10000),
         label = locale('labels.progress_bar', string.lower(config.partLabels[part])),
         canCancel = true,
