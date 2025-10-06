@@ -7,7 +7,7 @@ return {
         ambience = true,
 
         -- Disables headshots instantly killing players
-        headshots = false,
+        headshots = true,
 
     },
 
@@ -20,7 +20,6 @@ return {
             'WORLD_VEHICLE_POLICE',
             'WORLD_VEHICLE_POLICE_NEXT_TO_CAR',
             'WORLD_VEHICLE_SECURITY_CAR',
-            'WORLD_VEHICLE_HELI_LIFEGUARD',
             'WORLD_VEHICLE_MILITARY_PLANES_BIG',
             'WORLD_VEHICLE_MILITARY_PLANES_SMALL',
         },
@@ -41,8 +40,6 @@ return {
 
         scenarioGroups = {
             'LSA_Planes',
-            'SANDY_PLANES',
-            'GRAPESEED_PLANES',
             `ng_planes`,
         },
     },
