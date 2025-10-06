@@ -678,4 +678,110 @@ return {
 			export = 'sd-parceltheft.useParcel'
 		}
 	},
+
+    ["fleeca_case"] = {
+        label = "Fleeca Bank Case",
+        weight = 2000,
+        stack = true,
+        close = true,
+        description = "A mysterious case from a Fleeca Bank heist. Contains random loot.",
+        consume = 0,
+        client = {
+            image = "case_1.png",
+        },
+        server = {
+            export = 'sd-cases.useFleeca_case',
+        }
+    },
+
+    ["house_case"] = {
+        label = "House Robbery Case",
+        weight = 2000,
+        stack = true,
+        close = true,
+        description = "A case filled with items from house burglaries. Contents unknown.",
+        consume = 0,
+        client = {
+            image = "case_2.png",
+        },
+        server = {
+            export = 'sd-cases.useHouse_case',
+        }
+    },
+
+    ["chopshop_case"] = {
+        label = "Chop Shop Case",
+        weight = 2500,
+        stack = true,
+        close = true,
+        description = "A case containing random car parts from the chop shop.",
+        consume = 0,
+        client = {
+            image = "case_3.png",
+        },
+        server = {
+            export = 'sd-cases.useChopshop_case',
+        }
+    },
+
+    ["jewelry_case"] = {
+        label = "Jewelry Store Case",
+        weight = 1500,
+        stack = true,
+        close = true,
+        description = "A luxury case from Vangelico's. May contain valuable jewelry.",
+        consume = 0,
+        client = {
+            image = "case_4.png",
+        },
+        server = {
+            export = 'sd-cases.useJewelry_case',
+        }
+    },
+
+    ["pacific_case"] = {
+        label = "Pacific Bank Case",
+        weight = 3000,
+        stack = true,
+        close = true,
+        description = "A high-security case from the Pacific Standard vault. Extremely valuable.",
+        consume = 0,
+        client = {
+            image = "case_5.png",
+        },
+        server = {
+            export = 'sd-cases.usePacific_case',
+        }
+    },
+
+    ["casino_case"] = {
+        label = "Casino Heist Case",
+        weight = 2500,
+        stack = true,
+        close = true,
+        description = "A case stolen from the Diamond Casino vault. Contains premium loot.",
+        consume = 0,
+        client = {
+            image = "case_6.png",
+        },
+        server = {
+            export = 'sd-cases.useCasino_case',
+        }
+    },
+
+    ["civilian_case"] = {
+        label = "Civilian Case",
+        weight = 2500,
+        stack = true,
+        close = true,
+        description = "A case for the hard workers.",
+        consume = 0,
+        client = {
+            image = "case_7.png",
+        },
+        server = {
+            export = 'sd-cases.useCivilian_case',
+        }
+    },
+
 }
