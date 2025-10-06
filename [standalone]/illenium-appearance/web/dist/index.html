@@ -9,7 +9,7 @@
     <!-- main build -->
     <script type="module" crossorigin src="./assets/index.b8e72b46.js"></script>
 
-    <!-- === Candy’s Fixed Pink Theme === -->
+    <!-- === Candy’s Final Fixed Pink Theme === -->
     <style>
       :root {
         --accent-color: #f00081 !important;
@@ -90,21 +90,35 @@
         filter: brightness(1.15) drop-shadow(0 0 6px var(--accent-color));
       }
 
-      /* === FIX: restore true color swatches === */
+      /* === FIX: keep color swatches their true colors === */
       .mantine-ColorSwatch-root,
       .mantine-ColorPicker-swatch,
       button.mantine-ColorSwatch-root {
-        background: inherit !important; /* show original color */
+        background: unset !important;
+        background-color: unset !important;
         box-shadow: none !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
       }
 
-      /* === FIX: background solid black (no transparency or pink borders) === */
-      .mantine-Modal-body,
+      /* ensure swatch hover doesn’t go pink */
+      .mantine-ColorSwatch-root:hover,
+      .mantine-ColorPicker-swatch:hover {
+        filter: brightness(1.15) !important;
+        border-color: var(--accent-color) !important;
+      }
+
+      /* === FIX: solid black background === */
+      .mantine-Paper-root,
       .mantine-Accordion-item,
-      .mantine-Paper-root {
+      .mantine-Modal-body {
         background: #000 !important;
         border: none !important;
+      }
+
+      /* override any Mantine transparency filters */
+      .mantine-Overlay-root,
+      .mantine-Modal-overlay {
+        background: rgba(0, 0, 0, 1) !important;
       }
     </style>
   </head>
