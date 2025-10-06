@@ -1,6 +1,6 @@
 (function () {
     const chatConfig = {
-        logo: 'https://files.fivemerr.com/images/794545e0-522f-4069-acf7-2645c5635d40.png',
+        logo: 'https://r2.fivemanage.com/AW5LdVxdoruQsCYgIZNym/logo2.png',
         position: 'left', // left,right,top,bottom
     }
 

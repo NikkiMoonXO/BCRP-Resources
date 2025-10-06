@@ -1,10 +1,12 @@
 :root {
-    --main-color: #141414;
-    --border-color: #424242;
+    --main-color: #000000;          /* was #141414 */
+    --border-color: #000000;        /* was #424242 */
+    --accent-color: #F00081;        /* new: centralize pink */
 }
 
 ::selection {
-    background: var(--border-color)
+    /* make selection an accent instead of black for visibility */
+    background: var(--accent-color);
 }
 
 * {
@@ -26,13 +28,13 @@
     box-sizing: border-box;
 }
 
-.chat-input>div.input {
+.chat-input > div.input {
     background-color: var(--main-color) !important;
     border: calc(.0625rem* 1) solid var(--border-color);
     border-radius: calc(0.25rem* 1);
 }
 
-
+/* Container-style elements keep black borders but pink accents where it feels “active” */
 .suggestions {
     background-color: var(--main-color) !important;
     border: calc(.0625rem* 1) solid var(--border-color);
@@ -48,7 +50,7 @@
 textarea {
     resize: none;
     font-weight: 600 !important;
-    color: #c9c9c9;
+    color: #000000;                 /* was #c9c9c9 (light grey) */
     line-height: 1.83vh;
     padding-left: 4.5vh;
 }
@@ -56,7 +58,7 @@ textarea {
 .prefix {
     height: 100%;
     vertical-align: middle;
-    background: #42424238;
+    background: #00000038;          /* was #42424238 */
     padding-left: 4vh;
     display: inline-block;
     background-repeat: no-repeat;
@@ -66,22 +68,24 @@ textarea {
 }
 
 .help {
-    color: #ebebeb61;
+    color: #00000061;               /* was #ebebeb61 */
     font-size: 0.8rem !important;
     text-transform: lowercase;
     font-family: monospace !important;
     line-height: 1.5vh;
-    border-top: 0.1vh dashed #343434;
+    border-top: 0.1vh dashed #000000; /* was #343434 */
 }
 
+/* Replace yellow with pink */
 .param {
-    color: #fdff5dd1;
+    color: #F00081d1;               /* was #fdff5dd1 (yellow with alpha) */
     font-weight: 500;
 }
 
+/* Give this a pink edge for accent; feel free to swap back to black if you prefer */
 .type {
     padding: 0.3vh;
-    border: calc(.0625rem* 1) solid var(--border-color);
+    border: calc(.0625rem* 1) solid var(--accent-color); /* was var(--border-color) */
     border-radius: calc(0.25rem* 1);
     margin-right: 0.3vh;
 }
@@ -92,9 +96,8 @@ textarea {
     white-space: pre-line;
 }
 
-
 .alert {
-    background: #141414cc;
+    background: #000000cc;          /* was #141414cc */
     border: calc(0.0625rem* 1) solid var(--border-color);
     border-radius: calc(0.25rem* 1);
     word-wrap: break-word;
