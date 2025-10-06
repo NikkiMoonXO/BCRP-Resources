@@ -14,7 +14,7 @@ Config.Target = 'ox_target'
 
 -- Ped settings (only if OpenMethod is 'npc')
 Config.PedModel = 'a_m_y_business_03'
-Config.PedCoords = vector4(-254.0360, -970.3759, 30.2200, 161.4314)
+Config.PedCoords = vector4(-235.34, -922.66, 31.31, 344.71)
 Config.PedScenario = 'WORLD_HUMAN_CLIPBOARD'
 
 -- UI Title
@@ -60,7 +60,7 @@ Config.Jobs = {
         image = 'images/bus.png',
         description = 'Transport passengers around the City.',
         color = '228B22',
-        coords = vector3(2500.0, 4000.0, 35.0),
+        coords = vector3(452.7, -614.84, 28.58),
     },
 }
 
