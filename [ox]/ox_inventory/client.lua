@@ -1696,50 +1696,6 @@ RegisterNUICallback('giveItem', function(data, cb)
 	cb(1)
 
     if usingItem then return end
-      local item = lib.callback.await('inv:getItemFromSlot', false, data.slot)
-
-    local props = Items[item.name]
-
-    local slotId = item.slot
-
-	
-    if slotId == currentWeapon?.slot then
-        currentWeapon = Weapon.Disarm(currentWeapon)
-    end
-	
-	if props and props.modelp and not props.disableThrow then
-		client.closeInventory()
-
-			lib.showTextUI('[N] place\n[ESC] cancel', {
-				position = 'bottom-center',  
-
-			})
-
-		local entity = exports["Dm-throwitems"]:throwItem(data.slot, props, data.count)
-		
-		while DoesEntityExist(entity) do
-			DisableFrontendThisFrame()
-
-			if IsControlJustReleased(2, 200) then
-				DeleteEntity(entity)
-				RemoveWeaponFromPed(playerPed, 'WEAPON_BALL')
-
-				lib.hideTextUI()
-			end
-
-			if IsControlJustReleased(0, 306) then
-				DeleteEntity(entity)
-				RemoveWeaponFromPed(playerPed, 'WEAPON_BALL')
-				lib.hideTextUI()
-
-				exports["Dm-throwitems"]:placeItem(data.slot, props, data.count)
-			end
-
-			Wait(0)
-		end
-	end
-
-
 
 	if client.giveplayerlist then
 		local nearbyPlayers = lib.getNearbyPlayers(GetEntityCoords(playerPed), 3.0)

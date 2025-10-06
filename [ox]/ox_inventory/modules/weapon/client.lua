@@ -119,8 +119,6 @@ function Weapon.Disarm(currentWeapon, noAnim)
 			local sleep = anim and anim[6] or 1400
 
 			Utils.PlayAnimAdvanced(sleep, anim and anim[4] or 'reaction@intimidation@1h', anim and anim[5] or 'outro', coords.x, coords.y, coords.z, 0, 0, GetEntityHeading(cache.ped), 8.0, 3.0, sleep, 50, 0)
-
-			RemoveWeaponFromPed(cache.ped, currentWeapon.hash)
 		end
 
 		::skipAnim::
@@ -133,6 +131,7 @@ function Weapon.Disarm(currentWeapon, noAnim)
 	end
 
 	Utils.WeaponWheel()
+	RemoveAllPedWeapons(cache.ped, true)
 
 	if client.parachute then
 		local chute = `GADGET_PARACHUTE`

@@ -156,7 +156,6 @@ return {
     ['water'] = {
         label = 'Water',
         weight = 500,
-        modelp = "prop_ld_flow_bottle",
         client = {
             status = { thirst = 200000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -184,7 +183,6 @@ return {
 
     ['money'] = {
         label = 'Money',
-        modelp = "prop_anim_cash_pile_02",
     },
 
     ['black_money'] = {
@@ -239,7 +237,6 @@ return {
     ['advancedlockpick'] = {
         label = 'Advanced Lockpick',
         weight = 500,
-        modelp = "prop_tool_box_04",
     },
 
     ['screwdriverset'] = {
@@ -595,7 +592,6 @@ return {
     ['sandwich'] = {
         label = 'Sandwich',
         weight = 200,
-        modelp = "prop_sandwich_01",
     },
 
     ['walking_stick'] = {
