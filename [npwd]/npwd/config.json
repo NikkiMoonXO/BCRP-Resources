@@ -74,7 +74,7 @@
       "allowDeleteTweets": true,
       "allowReportTweets": true,
       "allowRetweet": true,
-      "characterLimit": 160,
+      "characterLimit": 320,
       "newLineLimit": 10,
       "enableAvatars": true,
       "enableEmojis": true,
@@ -90,7 +90,7 @@
       "persistListings": false
     },
     "browser": {
-      "homepageUrl": "https://docs.fivemanage.com"
+      "homepageUrl": "https://google.com"
     },
     "debug": {
       "level": "error",
