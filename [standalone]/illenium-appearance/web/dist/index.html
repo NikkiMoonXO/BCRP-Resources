@@ -6,96 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI</title>
 
-    <!-- build -->
+    <!-- main build -->
     <script type="module" crossorigin src="./assets/index.b8e72b46.js"></script>
 
-    <!-- === Candy Pink Theme (swatch-safe) === -->
+    <!-- === Candy's Full Pink Overhaul (Fixed Swatches Edition) === -->
     <style>
-      :root { --accent-color:#f00081 !important; }
+      :root {
+        --accent-color: #f00081 !important;
+      }
 
-      /* ========== ACCORDION (left list) ========== */
-      /* default/collapsed: add pink border */
-      .mantine-Accordion-control {
-        border:1px solid rgba(240,0,129,.35) !important;
-        border-radius:9999px !important;
-      }
-      /* hover = stronger border */
-      .mantine-Accordion-control:hover {
-        border-color:#f00081 !important;
-      }
-      /* opened/active row = pink background + border */
+      /* Accordion headers (Ped / Face / Hair etc.) */
       .mantine-Accordion-control[data-active="true"],
-      .mantine-Accordion-itemOpened .mantine-Accordion-control {
-        background:#f00081 !important;
-        border-color:#f00081 !important;
-        color:#fff !important;
+      .mantine-Accordion-itemOpened .mantine-Accordion-control,
+      .mantine-Accordion-control:hover {
+        background-color: var(--accent-color) !important;
+        color: #fff !important;
       }
 
-      /* ========== SIDE ACTION ICONS (round buttons) ========== */
-      /* make them pink, but never touch color swatches */
-      .mantine-ActionIcon-root:not(.mantine-ColorSwatch-root) {
-        background:#f00081 !important;
-        border:1px solid #f00081 !important;
-        color:#fff !important;
-      }
-      .mantine-ActionIcon-root:not(.mantine-ColorSwatch-root):hover {
-        filter:brightness(1.15) drop-shadow(0 0 6px #f00081);
-      }
-
-      /* ========== INPUTS / STEPPERS / NUMBER BOXES ========== */
-      input, select, textarea,
+      /* Inputs and select boxes */
+      input,
+      select,
+      textarea,
       .mantine-Input-input,
       .mantine-Select-input,
       .mantine-NumberInput-input,
       .mantine-TextInput-input {
-        background:#000 !important;
-        color:#fff !important;
-        border:1px solid #f00081 !important;   /* pink border always */
-        border-radius:8px !important;
+        background: #000 !important;
+        color: #fff !important;
+        border: 1px solid var(--accent-color) !important;
+        border-radius: 6px !important;
       }
-      input:focus, select:focus, textarea:focus,
+
+      /* Focused input border + glow */
+      input:focus,
+      select:focus,
+      textarea:focus,
       .mantine-Input-input:focus,
       .mantine-Select-input:focus,
       .mantine-NumberInput-input:focus,
       .mantine-TextInput-input:focus {
-        outline:2px solid #f00081 !important;
-        box-shadow:0 0 6px #f00081 !important;
-        border-color:#f00081 !important;
+        outline: 2px solid var(--accent-color) !important;
+        box-shadow: 0 0 6px var(--accent-color) !important;
+        border-color: var(--accent-color) !important;
       }
 
-      /* the tiny left/right stepper buttons around number inputs */
-      .mantine-Input-wrapper .mantine-ActionIcon-root {
-        border:1px solid #f00081 !important;   /* pink ring */
-        background:#000 !important;            /* stay black inside */
-        color:#fff !important;
-      }
-      .mantine-Input-wrapper .mantine-ActionIcon-root:hover {
-        background:#f00081 !important;         /* hover = pink fill */
+      /* Sliders and highlights */
+      .mantine-Slider-bar,
+      .mantine-Slider-thumb {
+        background-color: var(--accent-color) !important;
       }
 
-      /* ========== SLIDERS / SWITCHES ========== */
-      .mantine-Slider-bar, .mantine-Slider-thumb { background:#f00081 !important; }
+      /* Switches and toggles */
       .mantine-Switch-track[data-checked="true"],
       .mantine-Switch-thumb[data-checked="true"] {
-        background:#f00081 !important; border-color:#f00081 !important;
+        background-color: var(--accent-color) !important;
+        border-color: var(--accent-color) !important;
       }
 
-      /* ========== PRIMARY BUTTONS (Save/Apply) ========== */
+      /* Buttons (Save, Cancel) — filled variant only, NOT color swatches */
       .mantine-Button-root[data-variant="filled"]:not(.mantine-ColorSwatch-root) {
-        background:#f00081 !important; border-color:#f00081 !important; color:#fff !important;
-        transition:all .2s ease-in-out;
-      }
-      .mantine-Button-root[data-variant="filled"]:not(.mantine-ColorSwatch-root):hover {
-        filter:brightness(1.15) drop-shadow(0 0 6px #f00081);
+        background-color: var(--accent-color) !important;
+        border-color: var(--accent-color) !important;
+        color: #fff !important;
+        transition: all 0.2s ease-in-out;
       }
 
-      /* ========== KEEP SWATCHES TRUE-COLOUR ========== */
+      .mantine-Button-root[data-variant="filled"]:not(.mantine-ColorSwatch-root):hover {
+        filter: brightness(1.15) drop-shadow(0 0 6px var(--accent-color));
+      }
+
+      /* Right-side action icons — NOT color swatches */
+      .mantine-ActionIcon-root:not(.mantine-ColorSwatch-root) {
+        background-color: var(--accent-color) !important;
+        border-color: var(--accent-color) !important;
+        color: #fff !important;
+      }
+
+      .mantine-ActionIcon-root:not(.mantine-ColorSwatch-root):hover {
+        filter: brightness(1.15) drop-shadow(0 0 6px var(--accent-color));
+      }
+
+      /* Ensure swatches display their true colors */
       .mantine-ColorSwatch-root,
       .mantine-ColorPicker-swatch,
       button.mantine-ColorSwatch-root {
-        background:inherit !important;     /* show real palette */
-        box-shadow:none !important;
-        border-color:rgba(255,255,255,.15) !important;
+        background: inherit !important; /* keeps intended color */
+        box-shadow: none !important;
+        border-color: rgba(255, 255, 255, 0.15) !important; /* subtle outline only */
       }
     </style>
   </head>
